@@ -1,0 +1,49 @@
+POST http://localhost:3003/users/signup
+Content-Type: application/json
+
+{
+    "name": "MaryJ",
+    "email": "maryj@gmail.com",
+    "password": "123456mj"
+}
+
+###
+# @name login
+
+POST http://localhost:3003/users/login
+Content-Type: application/json
+
+{
+    "email": "maryj@gmail.com",
+    "password": "123456mj"
+}
+
+###
+
+# @name getProfile
+
+http://localhost:3003/users/profile
+Authorization: {{login.response.body.token}}
+
+###
+
+http://localhost:3003/users/{{getProfile.response.body.id}}/profile
+Authorization: {{login.response.body.token}}
+
+###
+
+POST http://localhost:3003/recipe
+Content-Type: application/json
+Authorization: {{login.response.body.token}}
+
+{
+    "title": "HotDogPremium",
+    "description": "Pão, salsisha, batata palha, maionese, ketchup, mostarda, purê de batata, bacon"
+}
+
+###
+
+http://localhost:3003/recipe/70dacaa6-0b86-461d-ad6c-c60112cdfca0
+Authorization: {{login.response.body.token}}
+
+
