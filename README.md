@@ -20,5 +20,31 @@ git clone https://github.com/suphessel/lab-cookenu.git
 ```
 npm install
 ```
+3- Crie um arquivo .env na raíz do projeto com esses dados:
+```
+//dados do seu banco
+
+DB_HOST =
+DB_USER =
+DB_PASSWORD = 
+DB_DATABASE_NAME = 
+
+//suas preferências para key e expire
+
+JWT_KEY =
+JWT_EXPIRES_IN = 
+
+//suas preferências de cost
+
+BCRYPT_COST = 
+```
+4- Rode esse comando:
+```
+npm run setup
+```
+5- E por fim esse:
+```
+npm start
+```
 
 *Desenvolvido com :sparkling_heart:	por Suzana P. Hessel*
