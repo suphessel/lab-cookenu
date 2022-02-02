@@ -14,7 +14,7 @@ No terminal,
 
 1- Clone este repositório
 ```
-git clone https://github.com/phsarah/cookenu.git
+git clone https://github.com/suphessel/lab-cookenu.git
 ```
 2- Instale as dependências
 ```
